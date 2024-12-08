@@ -11,7 +11,19 @@ public class Application {
     private static final EventController eventController = new EventController(new EventService(new EventRepository()));
     public static void main(String[] args) {
         inputDate();
+        inputMenu();
+    }
 
+    private static void inputMenu() {
+        while (true){
+            try {
+                String menu = InputView.inputMenu();
+                eventController.initMenu(menu);
+                return;
+            }catch (IllegalArgumentException e){
+                OutputView.printError(e.getMessage());
+            }
+        }
     }
 
     private static void inputDate() {

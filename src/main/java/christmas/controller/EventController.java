@@ -13,4 +13,8 @@ public class EventController {
     public void initDate(String date) {
         eventService.initDate(date);
     }
+
+    public void initMenu(String menu) {
+        eventService.initMenus(menu);
+    }
 }

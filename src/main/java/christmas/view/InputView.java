@@ -12,4 +12,7 @@ public class InputView {
         OutputView.printInputDate();
         return readLine();
     }
+
+    public static String inputMenu() {
+    }
 }

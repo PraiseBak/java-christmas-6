@@ -12,6 +12,11 @@ public class FoodRepository {
         }
     }
 
+    public static boolean isExistMenu(String s) {
+        return foodMap.containsKey(s);
+
+    }
+
     public Food getFoodByName(String name){
         return foodMap.get(name);
     }
