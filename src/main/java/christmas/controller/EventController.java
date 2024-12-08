@@ -17,4 +17,17 @@ public class EventController {
     public void initMenu(String menu) {
         eventService.initMenus(menu);
     }
+
+    public String showEventResult(){
+        StringBuilder stringBuilder = new StringBuilder(eventService.getOrderInfo());
+        stringBuilder.append(eventService.calculatePrevPay());
+        stringBuilder.append(eventService.giveFreeGift());
+        stringBuilder.append(eventService.getEventApplyString());
+        stringBuilder.append(eventService.getDiscountSum());
+        stringBuilder.append(eventService.getAfterApplyDiscount());
+        stringBuilder.append(eventService.getEventBadge());
+        return stringBuilder.toString();
+    }
+
+
 }

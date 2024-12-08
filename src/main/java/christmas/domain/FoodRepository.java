@@ -14,7 +14,18 @@ public class FoodRepository {
 
     public static boolean isExistMenu(String s) {
         return foodMap.containsKey(s);
+    }
 
+    public static Food getMenuByName(String menu) {
+        return foodMap.get(menu);
+    }
+
+    public static int getPriceByName(String menu) {
+        return foodMap.get(menu).getPrice();
+    }
+
+    public static Category getCategoryByName(String menu) {
+        return foodMap.get(menu).getCategory();
     }
 
     public Food getFoodByName(String name){

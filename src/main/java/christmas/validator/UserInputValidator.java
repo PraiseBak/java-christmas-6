@@ -5,6 +5,9 @@ import christmas.exception.EventExceptionHelper;
 import christmas.utility.NumberUtility;
 
 public class UserInputValidator {
+    private static final int MAX = 31;
+    private static final int MIN = 1;
+
     public static void validateMenus(String menu) {
         String[] split = menu.split(",");
         if(split.length == 0){

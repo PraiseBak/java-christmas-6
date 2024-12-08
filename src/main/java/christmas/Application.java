@@ -12,6 +12,7 @@ public class Application {
     public static void main(String[] args) {
         inputDate();
         inputMenu();
+        OutputView.println(eventController.showEventResult());
     }
 
     private static void inputMenu() {

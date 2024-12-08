@@ -14,5 +14,7 @@ public class InputView {
     }
 
     public static String inputMenu() {
+        OutputView.printInputMenu();
+        return readLine();
     }
 }

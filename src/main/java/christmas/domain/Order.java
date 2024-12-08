@@ -25,4 +25,24 @@ public class Order {
     public String getMenu() {
         return menu;
     }
+
+    public int getPayPrice() {
+        return request * FoodRepository.getPriceByName(menu);
+    }
+
+    public String getOrderInfo(){
+        return menu + " " + request + "개";
+    }
+
+    public boolean isSameCategory(Category category) {
+        Category menuCategory = FoodRepository.getCategoryByName(menu);
+        return category == menuCategory;
+    }
+
+    public int sameCategoryCount(Category category) {
+        if(isSameCategory(category)){
+            return request;
+        }
+        return 0;
+    }
 }
